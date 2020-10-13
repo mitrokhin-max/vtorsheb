@@ -126,7 +126,7 @@ body, html {
 .header__logo {
   position: relative;
   z-index: 2;
-  flex: 0 1 100px;
+  flex: 0 1 120px;
 }
 
 .header__logo img {
