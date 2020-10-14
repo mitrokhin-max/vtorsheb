@@ -20,12 +20,12 @@
                     </a>
 
                     <nav class="header__menu">
-                        <ul class="header__list">
+                        <ul class="header__list" id="header__list">
                             <li class="header__link">
-                                <a href="#">Главная</a>
+                                <a href="#home">Главная</a>
                             </li>
                             <li class="header__link">
-                                <a href="#">Преимущества</a>
+                                <a href="#advantages">Преимущества</a>
                             </li>
                             <li class="header__link">
                                 <a href="#">Продажа</a>
@@ -57,7 +57,106 @@
             </div>
         </header>
 
-        <main class="content"></main>
+        <main class="content">
+            <!-- Блок главная -->
+            <section class="home" id="home">
+                <div class="home__container container">
+                    <div class="home__content">
+                        <div class="home__row">
+                            <h1 class="home__title">ВторЩеб - щебень</h1>
+                            <p class="home__description">Выгодные цены</p>
+                            <p class="home__price">от 500 р/м<sup>3</sup></p>
+                            <a href="#" class="home__button">Оставить заявку</a>
+                        </div>
+                    </div>
+                    <div class="home__arrow">
+                        <a class="home__bottom"></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Блок преимущества -->
+            <section class="advantages" id="advantages">
+                <div class="advantages__container container">
+                    <h2 class="advantages__title title">Наши преимущества</h2>
+                    <div class="advantages__row">
+                        <div class="advantages__column">
+                            <div class="advantages__item item-adv">
+                                <div class="item-adv__row">
+                                    <div class="item-adv__col">
+                                        <div class="item-adv__string">
+                                            <div class="item-adv__icon">
+                                                <img src="img/money.svg" alt="">
+                                            </div>
+                                            <h3 class="item-adv__subtitle">Самые выгодные цены</h3>
+                                        </div>
+                                    </div>
+                                    <div class="item-adv__col">
+                                        <p class="item-adv__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto dolorum consequatur odio incidunt eaque, rem voluptates obcaecati culpa dicta suscipit!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advantages__column">
+                            <div class="advantages__item item-adv">
+                                <div class="item-adv__row">
+                                    <div class="item-adv__col">
+                                        <div class="item-adv__string">
+                                            <div class="item-adv__icon">
+                                                <img src="img/excavator.svg" alt="">
+                                            </div>
+                                            <h3 class="item-adv__subtitle">Точное определение объема груза</h3>
+                                        </div>
+                                    </div>
+                                    <div class="item-adv__col">
+                                        <p class="item-adv__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aspernatur quas ad eum laborum sint fugit qui natus fugiat repudiandae!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="advantages__column">
+                            <div class="advantages__item item-adv">
+                                <div class="item-adv__row">
+                                    <div class="item-adv__col">
+                                        <div class="item-adv__string">
+                                            <div class="item-adv__icon">
+                                                <img src="img/tipper.svg" alt="">
+                                            </div>
+                                            <h3 class="item-adv__subtitle">Быстрая доставка собственными самосвалами</h3>
+                                        </div>
+                                    </div>
+                                    <div class="item-adv__col">
+                                        <p class="item-adv__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum vel maxime adipisci, accusantium quas modi porro eius officiis similique est.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="advantages__column">
+                            <div class="advantages__item item-adv">
+                                <div class="item-adv__row">
+                                    <div class="item-adv__col">
+                                        <div class="item-adv__string">
+                                            <div class="item-adv__icon">
+                                                <img src="img/cup.svg" alt="">
+                                            </div>
+                                            <h3 class="item-adv__subtitle">Несколько лет опыта</h3>
+                                        </div>
+                                    </div>
+                                    <div class="item-adv__col">
+                                        <p class="item-adv__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae incidunt quibusdam voluptas aut repellendus necessitatibus error? Incidunt consequatur reprehenderit minus?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </section>
+
+        </main>
 
         <footer class="footer"></footer>
 

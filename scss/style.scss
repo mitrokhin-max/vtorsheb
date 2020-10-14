@@ -21,6 +21,10 @@ $color_main: rgb(78, 78, 78);
 $color_second: rgb(255, 240, 37);
 $color_link: #fff;
 $fz_link: 16px;
+$fz_title: 30px;
+$fz_subtitle: 26px;
+$fz_caption: 20px;
+$fz_text: 16px;
 
 /* Шапка сайта */
 .header {
@@ -113,6 +117,186 @@ $fz_link: 16px;
 .content {
     flex: 1 1 auto;
 }
+
+.home {
+    padding: 100px 0 0 0;
+    height: 100vh;
+    background-color: rgb(201, 201, 201);
+
+    &__container {
+        height: 100%;
+    }
+
+    &__content {
+        height: 85%;
+    }
+
+    &__row {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__title {
+        font-size: $fz_title;
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__description {
+        font-size: $fz_subtitle;
+        margin: 0px 0px 30px 0px;
+    }
+
+    &__price {
+        font-size: $fz_title;
+        font-weight: 700;
+        color: $color_second;
+        margin: 0px 0px 50px 0px;
+    }
+
+    &__button {
+        font-size: $fz_text;
+        font-weight: 600;
+        padding: 15px;
+        background-color: $color_second;
+        border-radius: 10px;
+        transition: 500ms;
+            &:hover {
+                transform: scale(1.1);
+            }
+    }
+
+    &__arrow {
+        height: 15%;
+        text-align: center;
+            a {
+                position: relative;
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                border: 3px solid $color_second;
+                border-radius: 50%;
+                animation: circle 1s linear infinite alternate running 0s none;
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    width: 20px;
+                    height: 3px;
+                    background-color: $color_second;
+                }
+                &::before {
+                    transform: rotate(45deg);
+                    left: 6px;
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                    left: 18px;
+                }
+            }
+            @keyframes circle{
+
+                0%{
+                transform: scale(1);
+                }
+                100%{
+                transform: scale(1.1);
+                }
+                }
+    }
+}
+
+.advantages {
+    padding: 50px 0 50px 0 ;
+
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    &__column {
+        flex: 0 1 25%;
+        padding: 0 10px;
+    }
+
+    &__item {
+    }
+}
+
+.title {
+    text-align: center;
+    font-size: $fz_title;
+    padding: 0 0 20px 0;
+    margin: 0px 0px 40px 0px;
+    position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 50px);
+            width: 100px;
+            height: 5px;
+            background-color: $color_second;
+        }
+}
+
+.item-adv {
+    min-height: 270px;
+    background-color: $color_main;
+    // border: 1px solid rgb(226, 226, 226);
+    border-radius: 5px;
+    padding: 20px 10px;
+    transition: 500ms;
+    
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &__row {
+        height: 100%;
+    }
+
+    &__col {
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__string {
+        display: flex;
+        align-items: center;
+        margin: 0 -5px;
+    }
+
+    &__icon {
+        flex: 0 1 30%;
+        padding: 0 2px;
+            img {
+                max-width: 100%;
+            }
+    }
+
+    &__subtitle {
+        flex: 0 1 70%;
+        padding: 0 5px;
+        font-size: $fz_caption;
+        color: #fff;
+    }
+
+    &__description {
+        font-size: $fz_text;
+        color: $color_second;
+        text-align: center;
+    }
+}
+
 
 .footer {
 }

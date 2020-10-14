@@ -4,10 +4,14 @@ $(document).ready(function() {
         $('body').toggleClass('lock');
     })
     
-    $("#list").on("click","a", function (event) {
+    $("#header__list").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
+    
+    $(function(){
+        $('.home__bottom').click(function(){$('html,body').animate({scrollTop:$('.advantages').offset().top}, 1000);});
+        });
 });
