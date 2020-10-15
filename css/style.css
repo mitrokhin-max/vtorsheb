@@ -160,7 +160,7 @@ body, html {
 }
 
 .header__link a:hover {
-  background-color: #fff025;
+  background-color: #ffdc33;
   color: #000;
 }
 
@@ -180,7 +180,7 @@ body, html {
   font-weight: 500;
   padding: 15px 10px;
   border-radius: 10px;
-  background-color: #fff025;
+  background-color: #ffdc33;
 }
 
 .header__burger {
@@ -226,7 +226,7 @@ body, html {
 .home__price {
   font-size: 30px;
   font-weight: 700;
-  color: #fff025;
+  color: #ffdc33;
   margin: 0px 0px 50px 0px;
 }
 
@@ -235,7 +235,7 @@ body, html {
   font-weight: 600;
   color: #000;
   padding: 15px;
-  background-color: #fff025;
+  background-color: #ffdc33;
   border-radius: 10px;
   transition: 500ms;
 }
@@ -247,15 +247,15 @@ body, html {
 .home__arrow {
   height: 15%;
   text-align: center;
-  cursor: pointer;
 }
 
 .home__arrow a {
+  cursor: pointer;
   position: relative;
   display: inline-block;
   width: 50px;
   height: 50px;
-  border: 3px solid #fff025;
+  border: 3px solid #ffdc33;
   border-radius: 50%;
   animation: circle 1s linear infinite alternate running 0s none;
 }
@@ -266,7 +266,7 @@ body, html {
   top: 50%;
   width: 20px;
   height: 3px;
-  background-color: #fff025;
+  background-color: #ffdc33;
 }
 
 .home__arrow a::before {
@@ -289,7 +289,7 @@ body, html {
 }
 
 .advantages {
-  padding: 50px 0 50px 0;
+  padding: 50px 0 0px 0;
 }
 
 .advantages__row {
@@ -318,14 +318,14 @@ body, html {
   left: calc(50% - 50px);
   width: 100px;
   height: 5px;
-  background-color: #fff025;
+  background-color: #ffdc33;
 }
 
 .item-adv {
-  min-height: 270px;
+  height: 250px;
   background-color: #4e4e4e;
   border-radius: 5px;
-  padding: 20px 10px;
+  padding: 20px 20px;
   transition: 500ms;
 }
 
@@ -348,7 +348,7 @@ body, html {
 }
 
 .item-adv__icon {
-  flex: 0 1 30%;
+  flex: 0 1 25%;
   padding: 0 2px;
 }
 
@@ -357,7 +357,7 @@ body, html {
 }
 
 .item-adv__subtitle {
-  flex: 0 1 70%;
+  flex: 0 1 75%;
   padding: 0 5px;
   font-size: 20px;
   color: #fff;
@@ -365,8 +365,63 @@ body, html {
 
 .item-adv__description {
   font-size: 16px;
-  color: #fff025;
-  text-align: center;
+  color: #ffdc33;
+  line-height: 1.2em;
+}
+
+.sale {
+  padding: 50px 0 50px 0;
+}
+
+.sale__slider {
+  width: 100%;
+  height: 450px;
+}
+
+.slide-sale {
+  width: 40%;
+  padding: 10px 20px;
+  background-color: #4e4e4e;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px;
+}
+
+.slide-sale__row {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-sale__img {
+  flex: 0 1 auto;
+  align-self: center;
+  width: 50%;
+  margin: 0px 0px 20px 0px;
+}
+
+.slide-sale__img img {
+  max-width: 100%;
+}
+
+.slide-sale__name {
+  font-size: 20px;
+  margin: 0px 0px 20px 0px;
+}
+
+.slide-sale__description {
+  font-size: 16px;
+  line-height: 1.2em;
+  margin: 0px 0px 30px 0px;
+}
+
+.slide-sale__price {
+  align-self: flex-start;
+  font-size: 20px;
+  font-weight: 500;
+  border: 3px solid #ffdc33;
+  border-radius: 5px;
+  padding: 10px;
+  white-space: nowrap;
 }
 
 /* Адаптив */
@@ -444,7 +499,7 @@ body, html {
     font-weight: 500;
     padding: 15px 10px;
     border-radius: 10px;
-    background-color: #fff025;
+    background-color: #ffdc33;
   }
   .header__tel {
     display: none;
@@ -462,7 +517,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #fff025;
+    background-color: #ffdc33;
     transition: 300ms;
   }
   .header__burger::before, .header__burger::after {
@@ -471,7 +526,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #fff025;
+    background-color: #ffdc33;
     transition: 300ms;
   }
   .header__burger::before {
@@ -494,6 +549,12 @@ body, html {
   .advantages__column {
     flex: 0 1 50%;
     margin: 0px 0px 20px 0px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .slide-sale {
+    width: 60%;
   }
 }
 
@@ -524,5 +585,14 @@ body, html {
   }
   .item-adv__subtitle {
     flex: 0 1 80%;
+  }
+  .item-adv__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .slide-sale {
+    width: 80%;
+    padding: 10px 10px;
   }
 }

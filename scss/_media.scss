@@ -140,7 +140,9 @@
     }
 }
 @media (max-width: 767.98px) {
-    
+    .slide-sale {
+        width: 60%;
+    }
 }
 @media (max-width: 575.98px) {
     .header {
@@ -183,5 +185,16 @@
         &__subtitle {
             flex: 0 1 80%;
         }
+
+        &__row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    .slide-sale {
+        width: 80%;
+        padding: 10px 10px;
     }
 }

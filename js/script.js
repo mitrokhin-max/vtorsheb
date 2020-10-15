@@ -11,7 +11,12 @@ $(document).ready(function() {
         $('body,html').animate({scrollTop: top}, 1000);
     });
     
-    $(function(){
-        $('.home__bottom').click(function(){$('html,body').animate({scrollTop:$('.advantages').offset().top}, 1000);});
-        });
+    $('.home__bottom').click(function(){$('html,body').animate({scrollTop:$('.advantages').offset().top}, 1000);});        
 });
+
+var mySwiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',
+    freeMode: true,
+    spaceBetween: 15,
+    grabCursor: true,
+})
