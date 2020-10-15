@@ -202,7 +202,7 @@ body, html {
 }
 
 .home__content {
-  height: 75%;
+  height: 85%;
 }
 
 .home__row {
@@ -245,7 +245,7 @@ body, html {
 }
 
 .home__arrow {
-  height: 25%;
+  height: 15%;
   text-align: center;
   cursor: pointer;
 }
@@ -509,6 +509,12 @@ body, html {
   .header__link:last-child {
     display: block;
     margin: 0px 0px 10px 0px;
+  }
+  .home__content {
+    height: 70%;
+  }
+  .home__arrow {
+    height: 30%;
   }
   .advantages__column {
     flex: 0 1 100%;

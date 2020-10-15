@@ -159,6 +159,16 @@
         }
     }
 
+    .home {
+        &__content {
+            height: 70%;
+        }
+
+        &__arrow {
+            height: 30%;
+        }
+    }
+
     .advantages {
         &__column {
             flex: 0 1 100%;
