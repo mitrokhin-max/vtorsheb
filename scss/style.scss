@@ -128,7 +128,7 @@ $fz_text: 16px;
     }
 
     &__content {
-        height: 85%;
+        height: 75%;
     }
 
     &__row {
@@ -170,8 +170,9 @@ $fz_text: 16px;
     }
 
     &__arrow {
-        height: 15%;
+        height: 25%;
         text-align: center;
+        cursor: pointer;
             a {
                 position: relative;
                 display: inline-block;

@@ -202,7 +202,7 @@ body, html {
 }
 
 .home__content {
-  height: 85%;
+  height: 75%;
 }
 
 .home__row {
@@ -245,8 +245,9 @@ body, html {
 }
 
 .home__arrow {
-  height: 15%;
+  height: 25%;
   text-align: center;
+  cursor: pointer;
 }
 
 .home__arrow a {
