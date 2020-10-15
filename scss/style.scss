@@ -321,10 +321,6 @@ $fz_text: 16px;
     }
 }
 
-.swiper-container {
-}
-.swiper-wrapper {
-}
 .slide-sale {
     width: 40%;
     padding: 10px 20px;
@@ -352,12 +348,14 @@ $fz_text: 16px;
     &__name {
         font-size: $fz_caption;
         margin: 0px 0px 20px 0px;
+        color: #fff;
     }
 
     &__description {
         font-size: $fz_text;
         line-height: 1.2em;
         margin: 0px 0px 30px 0px;
+        color: #fff;
     }
 
     &__price {
@@ -368,9 +366,8 @@ $fz_text: 16px;
         border-radius: 5px;
         padding: 10px;
         white-space: nowrap;
+        color: #fff;
     }
-}
-.swiper-slide {
 }
 
 
