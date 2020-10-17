@@ -494,7 +494,7 @@ body, html {
 }
 
 .faq {
-  padding: 50px 0 0 0;
+  padding: 50px 0 20px 0;
 }
 
 .faq__row {
@@ -684,26 +684,58 @@ body, html {
 }
 
 .footer {
-  padding: 0 0 10px 0;
+  background-color: #4e4e4e;
+  padding: 50px 0 10px 0;
+}
+
+.footer__title {
+  color: #fff;
 }
 
 .footer__row {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -10px;
+  margin: 0 -20px;
 }
 
 .footer__column {
-  flex: 0 1 50%;
-  padding: 0 10px;
+  padding: 0 20px;
+}
+
+.footer__column_1 {
+  flex: 0 1 60%;
+}
+
+.footer__column_2 {
+  flex: 0 1 40%;
+}
+
+.footer__item {
+  margin: 0px 0px 20px 0px;
 }
 
 .footer__subtitle {
   font-size: 26px;
+  color: #fff;
+  margin: 0px 0px 10px 0px;
 }
 
 .footer__text {
   font-size: 20px;
+  color: #fff;
+}
+
+.footer__year {
+  margin: 30px 0px 5px 0px;
+  font-size: 16px;
+  text-align: center;
+  color: #969696;
+}
+
+.footer__rights {
+  font-size: 16px;
+  text-align: center;
+  color: #969696;
 }
 
 /* Адаптив */
@@ -895,5 +927,15 @@ body, html {
   }
   .feedback {
     padding: 20px 15px;
+  }
+  .footer__column {
+    flex: 0 1 100%;
+  }
+  .footer__column_1 {
+    order: 1;
+  }
+  .footer__column_2 {
+    order: 0;
+    margin: 0px 0px 10px 0px;
   }
 }

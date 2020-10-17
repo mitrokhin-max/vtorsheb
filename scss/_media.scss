@@ -230,4 +230,17 @@
     .feedback {
         padding: 20px 15px;
     }
+
+    .footer {
+        &__column {
+            flex: 0 1 100%;
+                &_1 {
+                    order: 1;
+                }
+                &_2 {
+                    order: 0;
+                    margin: 0px 0px 10px 0px;
+                }
+        }
+    }
 }
