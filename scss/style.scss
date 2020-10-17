@@ -116,6 +116,7 @@ $fz_text: 16px;
 
 .content {
     flex: 1 1 auto;
+    padding: 0 0 10px 0; //!
 }
 
 .home {
@@ -301,7 +302,7 @@ $fz_text: 16px;
 }
 
 .sale {
-    padding: 50px 0 50px 0;
+    padding: 50px 0 0px 0;
 
     &__container {
     }
@@ -370,8 +371,325 @@ $fz_text: 16px;
     }
 }
 
+.buy {
+    padding: 50px 0 0 0;
+
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+    }
+
+    &__card {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 500ms;
+        }
+
+        &:hover::before {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        &_jb {
+            border-right: 2px solid $color_main;
+            background: url(../img/files/jb.jpg) center/cover no-repeat;
+        }
+
+        &_lom {
+            background: url(../img/files/lom.jpg) 0 0/cover no-repeat;
+        }
+    }
+}
+
+.card-buy {
+
+    &__row {
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__subtitle {
+        font-size: $fz_caption;
+        color: #fff;
+        margin: 0px 0px 20px 0px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__price {
+        font-size: $fz_caption;
+        font-weight: 500;
+        color: $color_second;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.faq {
+    padding: 50px 0 0 0;
+
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0 10px;
+    }
+
+    &__body {
+    }
+
+    &__item {
+        margin: 0px 0px 10px 0px;
+    }
+
+    &__question {
+        font-size: $fz_caption;
+        cursor: pointer;
+        background-color: $color_second;
+        padding: 10px 10px 10px 40px;
+        border-radius: 10px;
+        transition: 500ms;
+        position: relative;
+
+            &.active {
+                border-bottom-right-radius: initial;
+                border-bottom-left-radius: initial;
+            }
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 18px;
+                width: 15px;
+                height: 3px;
+                background-color: $color_main;
+                transition: 300ms;
+            }
+            &::before {
+                transform: rotate(45deg);
+                left: 19px;
+            }
+            &::after {
+                transform: rotate(-45deg);
+                left: 10px;
+            }
+            &.active::before {
+                transform: rotate(-45deg);
+            }
+            &.active::after {
+                transform: rotate(45deg);
+            }
+    }
+
+    &__answer {
+        display: none;
+        font-size: $fz_text;
+        line-height: 1.2em;
+        background-color: rgb(247, 247, 247);
+        padding: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    &__feedback {
+    }
+}
+
+
+.feedback {
+    background-color: rgb(247, 247, 247);
+    padding: 20px 30px;
+    border-radius: 10px;
+
+    &__form {
+    }
+
+    &__title {
+        font-size: $fz_subtitle;
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+    }
+
+    &__item {
+        margin: 0px 0px 15px 0px;
+        text-align: center;
+    }
+
+    &__name {
+        font-size: $fz_caption;
+        text-align: center;
+        padding: 10px;
+        border-radius: 50px;
+        width: 100%;
+        transition: 300ms;
+            &:focus {
+                box-shadow: 0 0 15px $color_second;
+            }
+    }
+
+    &__phone {
+        font-size: $fz_caption;
+        text-align: center;
+        padding: 10px;
+        border-radius: 50px;
+        width: 100%;
+            &:focus {
+                box-shadow: 0 0 15px $color_second;
+            }
+    }
+
+    &__comment {
+        font-size: $fz_caption;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 25px;
+        width: 100%;
+        resize: none;
+            &:focus {
+                box-shadow: 0 0 15px $color_second;
+            }
+    }
+
+    &__checkbox {
+        display: none;
+
+        &:checked + .feedback__privacy::after {
+            transform: scale(1);
+        }
+    }
+
+    &__privacy {
+        padding: 0 0 0 20px;
+        font-size: 14px;
+        line-height: 1.2em;
+        color: #000;
+        position: relative;
+        cursor: pointer;
+        
+
+            a {
+                color: #000;
+                text-decoration: underline;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background-color: #fff;
+                border-radius: 4px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 3px;
+                left: 3px;
+                width: 10px;
+                height: 10px;
+                background-color: $color_second;
+                border-radius: 2px;
+                transform: scale(0);
+                transition: 300ms;
+            }
+    }
+
+    &__button {
+        font-size: $fz_caption;
+        font-weight: 500;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: $color_second;
+        transition: 300ms;
+            &:hover {
+                transform: scale(1.1);
+            }
+    }
+}
+
+
 
 .footer {
+    padding: 0 0 10px 0;
+
+    &__container {
+    }
+
+    &__title {
+    }
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+
+    &__column {
+        flex: 0 1 50%;
+        padding: 0 10px;
+    }
+
+    &__map {
+    }
+
+    &__contacts {
+    }
+
+    &__content {
+    }
+
+    &__item {
+    }
+
+    &__subtitle {
+        font-size: $fz_subtitle;
+    }
+
+    &__text {
+        font-size: $fz_caption;
+    }
+
+    &__year {
+    }
+
+    &__rights {
+    }
 }
 
 

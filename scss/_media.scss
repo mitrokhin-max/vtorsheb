@@ -143,6 +143,22 @@
     .slide-sale {
         width: 60%;
     }
+
+    .card-buy {
+        &__row {
+            height: 150px;
+        }
+    }
+
+    .faq {
+        &__column {
+            flex: 0 1 100%;
+        }
+
+        &__body {
+            padding: 0 0 20px 0;
+        }
+    }
 }
 @media (max-width: 575.98px) {
     .header {
@@ -196,5 +212,22 @@
     .slide-sale {
         width: 80%;
         padding: 10px 10px;
+    }
+
+    .buy {
+        &__column {
+            flex: 0 1 100%;
+        }
+
+        &__card {
+            &_jb {
+                border-right: initial;
+                border-bottom: 2px solid $color_main;
+            }
+        }
+    }
+
+    .feedback {
+        padding: 20px 15px;
     }
 }

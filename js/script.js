@@ -4,6 +4,7 @@ $(document).ready(function() {
         $('body').toggleClass('lock');
     })
     
+    /* Плавный переход к блоку */
     $("#header__list").on("click","a", function (event) {
         event.preventDefault();
         var id  = $(this).attr('href'),
@@ -11,7 +12,17 @@ $(document).ready(function() {
         $('body,html').animate({scrollTop: top}, 1000);
     });
     
-    $('.home__bottom').click(function(){$('html,body').animate({scrollTop:$('.advantages').offset().top}, 1000);});        
+    /* Кнопка вниз */
+    $('.home__bottom').click(function(){$('html,body').animate({scrollTop:$('.advantages').offset().top}, 1000);});
+
+    /* Аккордеон */
+    $('.faq__question').click(function(event) {
+        if ($('.faq__body').hasClass('akkordeon')) {
+            $('.faq__question').not($(this)).removeClass('active');
+            $('.faq__answer').not($(this).next()).slideUp(300);
+        }
+        $(this).toggleClass('active').next().slideToggle(300);
+    });
 });
 
 var mySwiper = new Swiper('.swiper-container', {
