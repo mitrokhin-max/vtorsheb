@@ -15,12 +15,12 @@ $mail->Password = 'qwerty123'; // пароль от почты с которой
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
-$mail->setFrom('robot@remwoodwind.ru'); // От кого будет уходить письмо
+$mail->setFrom('robot@vtorsheb.ru'); // От кого будет уходить письмо
 $mail->addAddress('mitrohmax@yandex.ru'); // Кому будет уходить письмо
 $mail->isHTML(true);
 
 $mail->Subject = 'Заявка с сайта';
-$mail->Body    = 'Имя: '.$name. '<br>Номер телефона: '.$phone. '<br>Эл. почта: '.$email;
+$mail->Body    = '<strong>Имя:</strong> '.$name. '<br>Номер телефона: '.$phone. '<br>Комментарий: '.$comment;
 $mail->AltBody = '';
 
 if(!$mail->send()) {

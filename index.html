@@ -13,7 +13,7 @@
 <body>
     <div class="wrapper">
 
-        <header class="header">
+        <header class="header lock-padding">
             <div class="header__container container">
                 <div class="header__row">
 
@@ -68,7 +68,7 @@
                             <h1 class="home__title">Щебень и демонтаж зданий</h1>
                             <p class="home__description">Заказывайте материалы по выгодным ценам</p>
                             <p class="home__price">от 500 р/м<sup>3</sup></p>
-                            <a href="#" class="home__button">Оставить заявку</a>
+                            <a href="#popup" class="home__button popup-link">Оставить заявку</a>
                         </div>
                     </div>
                     <div class="home__arrow">
@@ -294,7 +294,7 @@
                         <div class="faq__column">
                             <div class="faq__feedback feedback">                                
                                 <form action="" method="POST" class="feedback__form">
-                                    <h3 class="feedback__title">Задайте вопрос, который остался без ответа.</h3>
+                                    <h3 class="feedback__title">Задайте вопрос, который остался без ответа</h3>
                                     <div class="feedback__item">
                                         <input type="text" class="feedback__name" name="user_name" placeholder="Имя:" required>
                                     </div>
@@ -352,6 +352,33 @@
 
     </div>
 
+    <div class="popup" id="popup">
+        <div class="popup__body">                                
+            <div class="popup__content">
+                <a href="#header" class="popup__close close-popup"></a>
+                <form action="" method="POST" class="popup__form">
+                    <h3 class="popup__title">Задайте вопрос, который остался без ответа</h3>
+                    <div class="popup__item">
+                        <input type="text" class="popup__name" name="user_name" placeholder="Имя:" required>
+                    </div>
+                    <div class="popup__item">
+                        <input type="tel" id="phone_1" class="popup__phone" name="user_phone" placeholder="Телефон:" required>
+                    </div>
+                    <div class="popup__item">
+                        <textarea rows="2" class="popup__comment" name="user_comment" placeholder="Ваш вопрос (если есть):"></textarea>
+                    </div>
+                    <div class="popup__item">
+                        <input id="agree" type="checkbox" checked class="popup__checkbox" required>
+                        <label for="agree" class="popup__privacy"><span>Согласен(-на) на <a href="privacy.html">обработку персональных данных</a></span></label>
+                    </div>
+                    <div class="popup__item">
+                        <button class="popup__button">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!--подключаем jQuery-->
     <script src="js/jquery-3.5.1.min.js"></script>
     <!-- подключаем Swiper -->
@@ -360,6 +387,8 @@
     <script src="js/aos.js"></script>
     <!-- подключаем MaskedInput -->
     <script src="js/jquery.maskedinput.min.js"></script>
+    <!-- Подключаем попап -->
+    <script src="js/popup.js"></script>
     <!--Подключаем файл JS скриптов-->
     <script src="js/script.js"></script>
 </body>

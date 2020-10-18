@@ -1,9 +1,8 @@
 $(document).ready(function() {
     $('.header__burger').click(function(event){
         $('.header__burger,.header__menu').toggleClass('active');
-        $('body').toggleClass('lock');
     })
-    
+
     /* Плавный переход к блоку */
     $("#header__list").on("click","a", function (event) {
         event.preventDefault();
@@ -34,4 +33,4 @@ var mySwiper = new Swiper('.swiper-container', {
     freeMode: true,
     spaceBetween: 15,
     grabCursor: true,
-})
+});

@@ -190,21 +190,36 @@ body, html {
 
 .content {
   flex: 1 1 auto;
-  padding: 0 0 10px 0;
 }
 
+/* Блок главная */
 .home {
+  position: relative;
   padding: 100px 0 0 0;
   height: 100vh;
-  background-color: #c9c9c9;
+  background: url(../img/files/bg.jpg) center/cover no-repeat;
+}
+
+.home::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .home__container {
   height: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .home__content {
   height: 85%;
+  position: relative;
 }
 
 .home__row {
@@ -218,11 +233,13 @@ body, html {
 .home__title {
   font-size: 30px;
   margin: 0px 0px 30px 0px;
+  color: #fff;
 }
 
 .home__description {
   font-size: 26px;
   margin: 0px 0px 30px 0px;
+  color: #fff;
 }
 
 .home__price {
@@ -756,6 +773,204 @@ body, html {
   color: #969696;
 }
 
+/* Попап */
+.popup {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 50px 0px 0px 0px;
+  transition: 500ms;
+}
+
+.popup.open {
+  opacity: 1;
+  visibility: visible;
+  /* .popup__content {
+            transform: perspective(600px) translate(0px, 0%) rotate(0deg);
+            opacity: 1;
+        } */
+}
+
+.popup__body {
+  min-height: 100%;
+  padding: 30px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup__content {
+  max-width: 800px;
+  background-color: #f7f7f7;
+  padding: 20px 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.popup__close {
+  width: 15px;
+  height: 15px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup__close::before, .popup__close::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffdc33;
+  transition: 300ms;
+}
+
+.popup__close::before {
+  transform: rotate(45deg);
+}
+
+.popup__close::after {
+  transform: rotate(-45deg);
+}
+
+.popup__close:hover::before {
+  transform: rotate(225deg);
+}
+
+.popup__close:hover::after {
+  transform: rotate(135deg);
+}
+
+.popup__title {
+  font-size: 26px;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.popup__item {
+  margin: 0px 0px 15px 0px;
+  text-align: center;
+}
+
+.popup__name {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  width: 100%;
+  transition: 300ms;
+}
+
+.popup__name:focus {
+  box-shadow: 0 0 15px #ffdc33;
+}
+
+.popup__phone {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 50px;
+  width: 100%;
+}
+
+.popup__phone:focus {
+  box-shadow: 0 0 15px #ffdc33;
+}
+
+.popup__comment {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 15px;
+  border-radius: 25px;
+  width: 100%;
+  resize: none;
+}
+
+.popup__comment:focus {
+  box-shadow: 0 0 15px #ffdc33;
+}
+
+.popup__checkbox {
+  display: none;
+}
+
+.popup__checkbox:checked + .popup__privacy::after {
+  transform: scale(1);
+}
+
+.popup__privacy {
+  padding: 0 0 0 20px;
+  font-size: 14px;
+  line-height: 1.2em;
+  color: #000;
+  position: relative;
+  cursor: pointer;
+}
+
+.popup__privacy a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.popup__privacy a:hover {
+  text-decoration: none;
+}
+
+.popup__privacy::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.popup__privacy::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffdc33;
+  border-radius: 2px;
+  transform: scale(0);
+  transition: 300ms;
+}
+
+.popup__button {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: #ffdc33;
+  transition: 300ms;
+}
+
+.popup__button:hover {
+  transform: scale(1.1);
+}
+
+.header.lock {
+  display: none;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
 /* Страница политики конфиденциальности */
 .privacy {
   overflow-x: hidden;
@@ -949,10 +1164,10 @@ body, html {
     margin: 0px 0px 30px 0px;
   }
   .home__content {
-    height: 70%;
+    height: 80%;
   }
   .home__arrow {
-    height: 30%;
+    height: 20%;
   }
   .advantages__column {
     flex: 0 1 100%;
