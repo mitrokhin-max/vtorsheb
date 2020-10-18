@@ -147,13 +147,14 @@ body, html {
   margin: 0px 5px;
 }
 
-.header__link:last-child {
+.header__link_tel {
   display: none;
 }
 
 .header__link a {
   color: #fff;
   font-size: 16px;
+  font-weight: 500;
   padding: 15px 10px;
   border-radius: 10px;
   transition: 300ms;
@@ -466,10 +467,24 @@ body, html {
 .buy__card_jb {
   border-right: 2px solid #4e4e4e;
   background: url(../img/files/jb.jpg) center/cover no-repeat;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.buy__card_jb::before {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .buy__card_lom {
   background: url(../img/files/lom.jpg) 0 0/cover no-repeat;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.buy__card_lom::before {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .card-buy__row {
@@ -815,16 +830,14 @@ body, html {
     position: fixed;
     opacity: 0;
     top: -180px;
-    right: 5%;
-    width: 0%;
+    left: 0;
+    width: 100%;
     transition: 500ms;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
   }
   .header__menu.active {
     top: 90px;
-    right: 0;
-    width: 100%;
     opacity: 1;
   }
   .header__list {
@@ -833,19 +846,21 @@ body, html {
     align-items: center;
     position: relative;
     z-index: 2;
-    height: 180px;
+    margin: 0px 0px 20px 0px;
   }
   .header__link {
-    text-align: center;
-    margin: 0px 0px;
+    margin: 0px 0px 5px 0px;
     flex: 0 1 33.333%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  .header__link:last-child {
-    flex: 0 1 100%;
+  .header__link_tel {
     display: block;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 30px 0px;
+    text-align: center;
   }
-  .header__link:last-child a {
+  .header__link_tel a {
     color: #000;
     font-weight: 500;
     padding: 15px 10px;
@@ -925,17 +940,13 @@ body, html {
 }
 
 @media (max-width: 575.98px) {
-  .header__list {
-    height: 220px;
-  }
   .header__link {
     text-align: center;
     margin: 0px 0px;
     flex: 0 1 50%;
   }
-  .header__link:last-child {
-    display: block;
-    margin: 0px 0px 10px 0px;
+  .header__link_tel {
+    margin: 0px 0px 30px 0px;
   }
   .home__content {
     height: 70%;
@@ -970,6 +981,20 @@ body, html {
   .buy__card_jb {
     border-right: initial;
     border-bottom: 2px solid #4e4e4e;
+    border-bottom-left-radius: initial;
+    border-top-right-radius: 10px;
+  }
+  .buy__card_jb::before {
+    border-bottom-left-radius: initial;
+    border-top-right-radius: 10px;
+  }
+  .buy__card_lom {
+    border-top-right-radius: initial;
+    border-bottom-left-radius: 10px;
+  }
+  .buy__card_lom::before {
+    border-top-right-radius: initial;
+    border-bottom-left-radius: 10px;
   }
   .feedback {
     padding: 20px 15px;

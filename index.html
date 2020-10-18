@@ -30,7 +30,7 @@
                                 <a href="#advantages">Преимущества</a>
                             </li>
                             <li class="header__link">
-                                <a href="#sale">Продажа</a>
+                                <a href="#sale">Цены</a>
                             </li>
                             <li class="header__link">
                                 <a href="#buy">Скупка</a>
@@ -41,14 +41,14 @@
                             <li class="header__link">
                                 <a href="#footer">Контакты</a>
                             </li>
-                            <li class="header__link header__link_tel">
-                                <a href="tel:+79261818248">+7 (926) 181-82-48</a>
-                            </li>
                         </ul>
+                        <div class="header__link header__link_tel">
+                            <a href="tel:+79261818248">+7 (926) 181-82-48</a>
+                        </div>
                     </nav>
 
                     <div class="header__tel">
-                        <a href="tel:+79261818248">+7 (926) 181-82-48</a>
+                        <a href="callto:+79261818248">+7 (926) 181-82-48</a>
                     </div>
 
                     <div class="header__burger">
@@ -65,8 +65,8 @@
                 <div class="home__container container">
                     <div class="home__content">
                         <div class="home__row">
-                            <h1 class="home__title">ВторЩеб - щебень</h1>
-                            <p class="home__description">Выгодные цены</p>
+                            <h1 class="home__title">Щебень и демонтаж зданий</h1>
+                            <p class="home__description">Заказывайте материалы по выгодным ценам</p>
                             <p class="home__price">от 500 р/м<sup>3</sup></p>
                             <a href="#" class="home__button">Оставить заявку</a>
                         </div>
@@ -158,10 +158,10 @@
                 </div>
             </section>
 
-            <!-- Блок продажа -->
+            <!-- Блок Цены -->
             <section class="sale" id="sale">
                 <div class="sale__container container">
-                    <h2 class="sale__title title">Продажа</h2>
+                    <h2 class="sale__title title">Цены</h2>
                     <div class="sale__slider swiper-container">
                         <div class="sale__wrapper swiper-wrapper">
 
@@ -275,10 +275,10 @@
                             <div class="faq__body akkordeon">
                                 <div class="faq__item">
                                     <h3 class="faq__question">Сколько стоит доставка вашей техникой?</h3>
-                                    <p class="faq__answer">Доставка нашими самосвалами осуществляется по цене 1000 руб. за каждый кубометр поставляемого материала. Например, при заказе вторичного щебня на 10 м<sup>3</sup>, доставка будет стоить 10000 руб, не учитывая стоимость самого материала.</p>
+                                    <p class="faq__answer">Доставка нашими самосвалами осуществляется по цене 1000 руб. за каждый кубометр поставляемого материала. Например, при заказе вторичного щебня на 10 м<sup>3</sup>, доставка будет стоить 10.000 руб, не учитывая стоимость самого материала.</p>
                                 </div>
                                 <div class="faq__item">
-                                    <h3 class="faq__question">Какой минимальный объем поставки?</h3>
+                                    <h3 class="faq__question">Какой минимальный объем доставки?</h3>
                                     <p class="faq__answer">Мы доставляем материалы от 5 м<sup>3</sup>.</p>
                                 </div>
                                 <div class="faq__item">
@@ -299,7 +299,7 @@
                                         <input type="text" class="feedback__name" name="user_name" placeholder="Имя:" required>
                                     </div>
                                     <div class="feedback__item">
-                                        <input type="tel" class="feedback__phone" name="user_phone" placeholder="Телефон:" required>
+                                        <input type="tel" id="phone_2" class="feedback__phone" name="user_phone" placeholder="Телефон:" required>
                                     </div>
                                     <div class="feedback__item">
                                         <textarea rows="2" class="feedback__comment" name="user_comment" placeholder="Ваш вопрос (если есть):"></textarea>
@@ -358,6 +358,8 @@
     <script src="js/swiper-bundle.min.js"></script>
     <!-- подключаем AOS -->
     <script src="js/aos.js"></script>
+    <!-- подключаем MaskedInput -->
+    <script src="js/jquery.maskedinput.min.js"></script>
     <!--Подключаем файл JS скриптов-->
     <script src="js/script.js"></script>
 </body>
