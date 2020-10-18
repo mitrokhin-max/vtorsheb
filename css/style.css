@@ -324,6 +324,7 @@ body, html {
 }
 
 .item-adv {
+  min-height: 230px;
   background-color: #4e4e4e;
   border-radius: 10px;
   padding: 15px;
@@ -379,7 +380,7 @@ body, html {
 .slide-sale {
   width: 40%;
   padding: 10px 20px;
-  background-color: #ffdc33;
+  background-color: #f7f7f7;
   border-radius: 10px;
   display: flex;
 }
@@ -392,7 +393,7 @@ body, html {
 }
 
 .slide-sale__img {
-  height: 30%;
+  flex: 0 0 30%;
   width: 100%;
   align-self: center;
   margin: 0px 0px 10px 0px;
@@ -402,30 +403,30 @@ body, html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border: 2px solid #4e4e4e;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .slide-sale__name {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 500;
   margin: 0px 0px 10px 0px;
-  color: #4e4e4e;
+  color: #ffdc33;
 }
 
 .slide-sale__description {
   font-size: 16px;
   line-height: 1.2em;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 5px 0px;
   color: #4e4e4e;
 }
 
 .slide-sale__price {
   font-size: 20px;
   font-weight: 500;
-  border: 3px solid #4e4e4e;
+  border: 3px solid #ffdc33;
   border-radius: 5px;
   padding: 10px;
+  margin: 5px 0px 0px 0px;
   white-space: nowrap;
   color: #4e4e4e;
 }
@@ -740,6 +741,40 @@ body, html {
   color: #969696;
 }
 
+/* Страница политики конфиденциальности */
+.privacy {
+  overflow-x: hidden;
+  padding: 20px 0;
+}
+
+.privacy__logo {
+  width: 150px;
+  margin: 0 auto 20px auto;
+}
+
+.privacy__logo img {
+  max-width: 100%;
+}
+
+.privacy__title {
+  font-size: 30px;
+  margin: 0px 0px 20px 0px;
+}
+
+.privacy__text p {
+  font-size: 16px;
+  color: #81858e;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 30px;
+}
+
+.privacy__subtitle {
+  font-size: 26px;
+  margin: 20px 0px 10px 0px;
+  padding: 0 0 5px 0;
+  border-bottom: 2px solid #ffdc33;
+}
+
 /* Адаптив */
 /* Адаптивный контейнер */
 @media (max-width: 1199.98px) {
@@ -866,11 +901,17 @@ body, html {
     flex: 0 1 50%;
     margin: 0px 0px 20px 0px;
   }
+  .slide-sale {
+    width: 45%;
+  }
+  .slide-sale__img {
+    flex: 0 0 20%;
+  }
 }
 
 @media (max-width: 767.98px) {
   .slide-sale {
-    width: 60%;
+    width: 65%;
   }
   .card-buy__row {
     height: 150px;
@@ -917,8 +958,11 @@ body, html {
     justify-content: center;
   }
   .slide-sale {
-    width: 80%;
+    width: 85%;
     padding: 10px 10px;
+  }
+  .slide-sale__img {
+    flex: 0 0 15%;
   }
   .buy__column {
     flex: 0 1 100%;

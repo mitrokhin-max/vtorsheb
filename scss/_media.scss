@@ -138,10 +138,18 @@
             margin: 0px 0px 20px 0px;
         }
     }
+
+    .slide-sale {
+        width: 45%;
+
+        &__img {
+            flex: 0 0 20%;
+        }
+    }
 }
 @media (max-width: 767.98px) {
     .slide-sale {
-        width: 60%;
+        width: 65%;
     }
 
     .card-buy {
@@ -210,8 +218,12 @@
     }
 
     .slide-sale {
-        width: 80%;
+        width: 85%;
         padding: 10px 10px;
+
+        &__img {
+            flex: 0 0 15%;
+        }
     }
 
     .buy {
