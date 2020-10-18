@@ -302,6 +302,7 @@ body, html {
 .advantages__column {
   flex: 0 1 25%;
   padding: 0 10px;
+  display: flex;
 }
 
 .title {
@@ -323,10 +324,9 @@ body, html {
 }
 
 .item-adv {
-  height: 250px;
   background-color: #4e4e4e;
-  border-radius: 5px;
-  padding: 20px 20px;
+  border-radius: 10px;
+  padding: 15px;
   transition: 500ms;
 }
 
@@ -338,14 +338,11 @@ body, html {
   height: 100%;
 }
 
-.item-adv__col {
-  margin: 0px 0px 20px 0px;
-}
-
 .item-adv__string {
   display: flex;
   align-items: center;
   margin: 0 -5px;
+  padding: 0 0 20px 0;
 }
 
 .item-adv__icon {
@@ -376,56 +373,61 @@ body, html {
 
 .sale__slider {
   width: 100%;
-  height: 450px;
+  height: 500px;
 }
 
 .slide-sale {
   width: 40%;
   padding: 10px 20px;
-  background-color: #4e4e4e;
-  border: 1px solid #b3b3b3;
+  background-color: #ffdc33;
   border-radius: 10px;
+  display: flex;
 }
 
 .slide-sale__row {
-  height: 100%;
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
 .slide-sale__img {
-  flex: 0 1 auto;
+  height: 30%;
+  width: 100%;
   align-self: center;
-  width: 50%;
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .slide-sale__img img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 2px solid #4e4e4e;
+  border-radius: 20px;
 }
 
 .slide-sale__name {
-  font-size: 20px;
-  margin: 0px 0px 20px 0px;
-  color: #ffdc33;
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0px 0px 10px 0px;
+  color: #4e4e4e;
 }
 
 .slide-sale__description {
   font-size: 16px;
   line-height: 1.2em;
-  margin: 0px 0px 30px 0px;
-  color: #fff;
+  margin: 0px 0px 10px 0px;
+  color: #4e4e4e;
 }
 
 .slide-sale__price {
-  align-self: flex-start;
   font-size: 20px;
   font-weight: 500;
-  border: 3px solid #ffdc33;
+  border: 3px solid #4e4e4e;
   border-radius: 5px;
   padding: 10px;
   white-space: nowrap;
-  color: #fff;
+  color: #4e4e4e;
 }
 
 .buy {
