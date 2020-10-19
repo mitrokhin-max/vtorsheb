@@ -16,7 +16,7 @@ $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 $mail->setFrom('robot@vtorsheb.ru'); // От кого будет уходить письмо
-$mail->addAddress('mitrohmax@yandex.ru'); // Кому будет уходить письмо
+$mail->addAddress('trz69@yandex.ru'); // Кому будет уходить письмо
 $mail->isHTML(true);
 
 $body = '<h2>Заявка на обратный звонок</h2>';
