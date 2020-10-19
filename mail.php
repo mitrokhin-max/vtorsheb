@@ -11,7 +11,7 @@ $mail->isSMTP();
 $mail->Host = 'mail.hosting.reg.ru';
 $mail->SMTPAuth = true;
 $mail->Username = 'robot@vtorsheb.ru'; // логин от почты с которой будут отправляться письма
-$mail->Password = 'qwerty123'; // пароль от почты с которой будут отправляться письма
+$mail->Password = '2143abcd'; // пароль от почты с которой будут отправляться письма
 $mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
@@ -19,9 +19,13 @@ $mail->setFrom('robot@vtorsheb.ru'); // От кого будет уходить 
 $mail->addAddress('mitrohmax@yandex.ru'); // Кому будет уходить письмо
 $mail->isHTML(true);
 
+$body = '<h2>Заявка на обратный звонок</h2>';
+$body.= '<p><b>Имя: </b>'.$name.'</p>';
+$body.= '<p><b>Телефон: </b>'.$phone.'</p>';
+$body.= '<p><b>Комментарий: </b>'.$comment.'</p>';
+
 $mail->Subject = 'Заявка с сайта';
-$mail->Body    = '<strong>Имя:</strong> '.$name. '<br>Номер телефона: '.$phone. '<br>Комментарий: '.$comment;
-$mail->AltBody = '';
+$mail->Body    = $body;
 
 if(!$mail->send()) {
     echo 'Error';
