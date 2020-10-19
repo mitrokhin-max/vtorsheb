@@ -126,7 +126,7 @@ body, html {
 .header__logo {
   position: relative;
   z-index: 2;
-  flex: 0 1 120px;
+  flex: 0 1 140px;
 }
 
 .header__logo img {
@@ -155,6 +155,7 @@ body, html {
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
   padding: 15px 10px;
   border-radius: 10px;
   transition: 300ms;
@@ -179,6 +180,7 @@ body, html {
   color: #000;
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
   padding: 15px 10px;
   border-radius: 10px;
   background-color: #ffdc33;
@@ -307,6 +309,7 @@ body, html {
   }
 }
 
+/* Блок преимущества */
 .advantages {
   padding: 50px 0 0px 0;
 }
@@ -386,6 +389,7 @@ body, html {
   line-height: 1.2em;
 }
 
+/* Блок цены */
 .sale {
   padding: 50px 0 0px 0;
 }
@@ -449,6 +453,7 @@ body, html {
   color: #4e4e4e;
 }
 
+/* Блок скупка */
 .buy {
   padding: 50px 0 0 0;
 }
@@ -528,6 +533,7 @@ body, html {
   z-index: 1;
 }
 
+/* Блок вопрос-ответ */
 .faq {
   padding: 50px 0 20px 0;
 }
@@ -718,6 +724,7 @@ body, html {
   transform: scale(1.1);
 }
 
+/* Подвал сайта */
 .footer {
   background-color: #4e4e4e;
   padding: 50px 0 10px 0;
@@ -1003,6 +1010,76 @@ body.lock {
   margin: 20px 0px 10px 0px;
   padding: 0 0 5px 0;
   border-bottom: 2px solid #ffdc33;
+}
+
+/* Страница успешной отправки заявки */
+.success {
+  overflow: hidden;
+  padding: 20px 0 0 0;
+}
+
+.success__logo {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.success__logo img {
+  max-width: 100%;
+}
+
+.success__row {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.success__col {
+  margin: 0px 0px 20px 0px;
+}
+
+.success__img {
+  margin: 0px 0px 20px 0px;
+  border-radius: 50%;
+  background-color: #ffdc33;
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+.success__img::before, .success__img::after {
+  content: '';
+  position: absolute;
+  bottom: 22px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.success__img::before {
+  transform: rotate(-45deg);
+  height: 50px;
+  left: 30px;
+}
+
+.success__img::after {
+  transform: rotate(45deg);
+  height: 70px;
+  left: 61.3px;
+}
+
+.success__thanks {
+  font-size: 30px;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.success__text {
+  font-size: 26px;
+  color: #81858e;
+  text-align: center;
+  margin: 0px 0px 20px 0px;
 }
 
 /* Адаптив */

@@ -29,7 +29,7 @@ $fz_caption: 20px;
 $fz_text: 16px;
 
 /* Шапка сайта */
-.header {
+.header {    
     padding: 10px 0px;
     position: fixed;
     top: 0;
@@ -60,7 +60,7 @@ $fz_text: 16px;
 		&__logo {
             position: relative;
             z-index: 2;
-            flex: 0 1 120px;
+            flex: 0 1 140px;
             img {
                 max-width: 100%;
             }
@@ -84,6 +84,7 @@ $fz_text: 16px;
                     color: $color_link;
                     font-size: $fz_link;
                     font-weight: 500;
+                    white-space: nowrap;
                     padding: 15px 10px;
                     border-radius: 10px;
                     transition: 300ms;
@@ -106,6 +107,7 @@ $fz_text: 16px;
                     color: #000;
                     font-size: $fz_link;
                     font-weight: 500;
+                    white-space: nowrap;
                     padding: 15px 10px;
                     border-radius: 10px;
                     background-color: $color_second;
@@ -232,6 +234,7 @@ $fz_text: 16px;
     }
 }
 
+/* Блок преимущества */
 .advantages {
     padding: 50px 0 0px 0 ;
 
@@ -321,6 +324,7 @@ $fz_text: 16px;
     }
 }
 
+/* Блок цены */
 .sale {
     padding: 50px 0 0px 0;
 
@@ -398,6 +402,7 @@ $fz_text: 16px;
     }
 }
 
+/* Блок скупка */
 .buy {
     padding: 50px 0 0 0;
 
@@ -485,6 +490,7 @@ $fz_text: 16px;
     }
 }
 
+/* Блок вопрос-ответ */
 .faq {
     padding: 50px 0 20px 0;
 
@@ -564,7 +570,6 @@ $fz_text: 16px;
     &__feedback {
     }
 }
-
 
 .feedback {
     background-color: $color_third;
@@ -683,6 +688,7 @@ $fz_text: 16px;
     }
 }
 
+/* Подвал сайта */
 .footer {
     background-color: $color_main;
     padding: 50px 0 10px 0;
@@ -972,6 +978,75 @@ body.lock {
         padding: 0 0 5px 0;
         border-bottom: 2px solid $color_second;
     }
+}
+
+/* Страница успешной отправки заявки */
+.success {
+    overflow: hidden;
+    padding: 20px 0 0 0;
+		&__container {
+        }
+        
+        &__logo {
+            width: 150px;
+            margin: 0 auto;
+                img {
+                    max-width: 100%;
+                }
+        }
+
+		&__row {
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+		}
+
+		&__col {
+            margin: 0px 0px 20px 0px;
+		}
+
+		&__img {
+            margin: 0px 0px 20px 0px;
+            border-radius: 50%;
+            background-color: $color_second;
+            width: 120px;
+            height: 120px;
+            position: relative;
+
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                bottom: 22px;
+                width: 20px;                
+                background-color: #fff;
+                border-radius: 5px;
+            }
+            &::before {
+                transform: rotate(-45deg);
+                height: 50px;
+                left: 30px;
+            }
+            &::after {
+                transform: rotate(45deg);
+                height: 70px;
+                left: 61.3px;
+            }
+		}
+
+		&__thanks {
+            font-size: $fz_title;
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+		}
+
+		&__text {
+            font-size: $fz_subtitle;
+            color: $color_text;
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+        }
 }
 
 /* Адаптив */
