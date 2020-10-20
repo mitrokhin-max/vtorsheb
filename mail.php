@@ -19,7 +19,7 @@ $mail->setFrom('robot@vtorsheb.ru'); // От кого будет уходить 
 $mail->addAddress('trz69@yandex.ru'); // Кому будет уходить письмо
 $mail->isHTML(true);
 
-$body = '<h2>Заявка на обратный звонок</h2>';
+$body = '<h2>Заявка на обратную связь</h2>';
 $body.= '<p><b>Имя: </b>'.$name.'</p>';
 $body.= '<p><b>Телефон: </b>'.$phone.'</p>';
 $body.= '<p><b>Комментарий: </b>'.$comment.'</p>';
