@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
     
     /* Кнопка вниз */
-    $('.home__bottom').click(function(){$('html,body').animate({scrollTop:$('.advantages').offset().top}, 1000);});
+    $('.home__bottom').click(function(){$('html,body').animate({scrollTop:$('.advantages').offset().top - 80}, 1000);});
 
     /* Аккордеон */
     $('.faq__question').click(function(event) {
